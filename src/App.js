@@ -1,15 +1,12 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./components/layouts/Header";
-import Visitor from "./components/Visitors/Visitor";
 import Visitors from "./components/Visitors/Visitors";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Provider } from "./context";
 import Addvisitor from "./components/Visitors/Addvisitor";
 import Notfound from "./components/pages/Notfound";
-import Newsfeed from "./components/News/Newsfeed";
 import getNews from "./components/News/getNews";
 
 function App() {

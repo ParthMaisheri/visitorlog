@@ -50,7 +50,7 @@ class Visitor extends Component {
                   className="fa fa-sort-down"
                   style={{ cursor: "pointer" }}
                 ></i>
-                {timeOfExit == "" ? (
+                {timeOfExit === "" ? (
                   <i
                     className="fa fa-question"
                     style={{

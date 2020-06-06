@@ -16,7 +16,7 @@ export default class Newsfeed extends Component {
       <div class="jumbotron">
         <div className="row">
           <h1 className="display-4 col-sm-6">{title}</h1>
-          <img src={urlToImage} height="50%" width="50%" />
+          <img src={urlToImage} height="50%" width="50%" alt="" />
         </div>
         <p className="lead">{description}</p>
         <hr className="my-4" />

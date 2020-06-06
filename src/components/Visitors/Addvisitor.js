@@ -51,10 +51,9 @@ class Addvisitor extends Component {
 
     const {
       name,
-      email,
       photo,
       typeOfVisit,
-      dateOfEntry,
+
       personToVisit,
       timeOfEntry
     } = this.state;
@@ -130,7 +129,11 @@ class Addvisitor extends Component {
                       </div>
                     </React.Fragment>
                   ) : (
-                    <img src={this.state.photo} className="rounded-circle" />
+                    <img
+                      src={this.state.photo}
+                      className="rounded-circle"
+                      alt=""
+                    />
                   )}
                 </div>
                 <form onSubmit={this.submitForm.bind(this, dispatch)}>
