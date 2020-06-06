@@ -1,25 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Header from "./components/layouts/Header";
+import Visitor from "./components/Visitors/Visitor";
+import Visitors from "./components/Visitors/Visitors";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Provider } from "./context";
+import Addvisitor from "./components/Visitors/Addvisitor";
+import Notfound from "./components/pages/Notfound";
+import Newsfeed from "./components/News/Newsfeed";
+import getNews from "./components/News/getNews";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider>
+      <Router>
+        <div className="App">
+          <Header branding="Visitor Log" />
+          <div className="container">
+            <Switch>
+              <Route exact path="/" component={Visitors} />
+              <Route exact path="/add" component={Addvisitor} />
+              <Route exact path="/news" component={getNews} />
+              <Route component={Notfound} />
+            </Switch>
+          </div>
+        </div>
+      </Router>
+    </Provider>
   );
 }
 
